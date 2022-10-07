@@ -19,13 +19,13 @@ const Home = () => {
             once: false}
         );
     })
-    const [toggleComment, setToggleComment] = useState(false)
+    const [toggleComment, setToggleComment] = useState(true)
     return ( 
-        <main className="grid">
+        <main className="grid Home">
             <ImageSlider />
             <div onClick={()=>{setToggleComment(true)}} className={`comment-arrow ${toggleComment? "arrow-rotate":"arrow-rotate-back"}`}><FaAngleLeft size={30}/></div>
             <Claims/>
-            <Latest/>
+            <Latest toggleComment={toggleComment} setToggleComment={setToggleComment}/>
             <Comments toggleComment={toggleComment} setToggleComment={setToggleComment}/>
         </main>
      );

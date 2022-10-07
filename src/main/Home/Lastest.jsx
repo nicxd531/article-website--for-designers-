@@ -6,13 +6,14 @@ import photoshop from "../data/photoshop.json"
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import  { Navigation, Pagination } from 'swiper';
+import LatestBg from "./latestBg";
 
 
 
 
 
 
-const Latest = () => {
+const Latest = ({setToggleComment,toggleComment}) => {
   return (  
       <section className="latest grid">   
         <div className="gridSpan12">
@@ -41,7 +42,7 @@ const Latest = () => {
             return(
               <SwiperSlide style={{flexShrink:"1"}} key={index}>
                 <div  className="latest-work-articles ">
-                  <div>
+                  <div onClick={()=>setToggleComment(!toggleComment)}>
                     <img src={data.image} alt="article image"/>
                   </div>
                   <div>
@@ -60,7 +61,7 @@ const Latest = () => {
             return(
               <SwiperSlide style={{flexShrink:"1",flexGrow:"0"}} key={index}>
                 <div  className="latest-work-articles ">
-                  <div>
+                <div onClick={()=>setToggleComment(!toggleComment)}>
                     <img src={data.image} alt="article image"/>
                   </div>
                   <div>
@@ -79,7 +80,7 @@ const Latest = () => {
             return(
               <SwiperSlide style={{flexShrink:"1",flexGrow:"0"}} key={index}>
                 <div  className="latest-work-articles ">
-                  <div>
+                <div onClick={()=>setToggleComment(!toggleComment)}>
                     <img src={data.image} alt="article image"/>
                   </div>
                   <div>
@@ -98,7 +99,7 @@ const Latest = () => {
             return(
               <SwiperSlide style={{flexShrink:"1",flexGrow:"0"}} key={index}>
                 <div  className="latest-work-articles ">
-                  <div>
+                <div onClick={()=>setToggleComment(!toggleComment)}>
                     <img src={data.image} alt="article image"/>
                   </div>
                   <div>
@@ -115,7 +116,7 @@ const Latest = () => {
           })}
           </Swiper>
           </div>
-       
+          {<LatestBg toggleComment={toggleComment} setToggleComment={setToggleComment}/>}
       </section>
   );
 }

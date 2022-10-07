@@ -19,7 +19,7 @@ const NavBar = () => {
     return ( 
         <nav className="navBar grid">
             <hr/>
-            <div className="grid">
+            <div className="grid mainNavbar">
                 <div className="pageLogo-div ">
                     <img src="image/companyimage.png" alt="company's logo"/>
                 </div>
@@ -35,7 +35,7 @@ const NavBar = () => {
                 <div >
                     <BiMenu  onClick={()=>{setToggleMenu(!ToggleMenu)}} size={32.4}></BiMenu>
                 </div>
-                <div ref={ref} className={`navigation-btn ${ToggleMenu? "menu-visibity-on":"menu-visibity-off" }`}>
+                <div ref={ref} className={`navigation-btn  ${ToggleMenu? "menu-visibity-on":"menu-visibity-off" }`}>
                     <a href="/">home</a>
                     <a href="/About">about</a>
                     <a href="/Projects">projects</a>
@@ -48,8 +48,8 @@ const NavBar = () => {
                             <BsMoonFill onClick={()=>{setToggleThemeColour(!ToggleThemeColour)}} size={18}></BsMoonFill>:
                             <BsSun onClick={()=>{setToggleThemeColour(!ToggleThemeColour)}} size={18}></BsSun>
                         }
-
                     </div>
+                    <hr/>
                 </div>
             </div>
             

@@ -48,12 +48,12 @@ const Projects = () => {
                
             </div>
             <Routes>
-                <Route path="" element={<All gridToggle={gridToggle}/>}/>
-                <Route path="/web" element={<Web  gridToggle={gridToggle}/>}/>
-                <Route path="/print" element={<Print  gridToggle={gridToggle}/>}/>
-                <Route path="/art" element={<Art  gridToggle={gridToggle}/>}/>
-                <Route path="/photoshop" element={<Photoshop  gridToggle={gridToggle}/>}/>
-                <Route path="/development" element={<Development gridToggle={gridToggle}/>}/>
+                <Route path="" element={<All toggleComment={toggleComment} setToggleComment={setToggleComment} gridToggle={gridToggle}/>}/>
+                <Route path="/web" element={<Web toggleComment={toggleComment} setToggleComment={setToggleComment}  gridToggle={gridToggle}/>}/>
+                <Route path="/print" element={<Print toggleComment={toggleComment} setToggleComment={setToggleComment}  gridToggle={gridToggle}/>}/>
+                <Route path="/art" element={<Art toggleComment={toggleComment} setToggleComment={setToggleComment} gridToggle={gridToggle}/>}/>
+                <Route path="/photoshop" element={<Photoshop toggleComment={toggleComment} setToggleComment={setToggleComment} gridToggle={gridToggle}/>}/>
+                <Route path="/development" element={<Development toggleComment={toggleComment} setToggleComment={setToggleComment} gridToggle={gridToggle}/>}/>
             </Routes>
             <div className="grid-toggle">
                 <div>
