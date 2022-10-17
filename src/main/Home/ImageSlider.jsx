@@ -27,7 +27,6 @@ const ImageSlider = () => {
      useEffect(()=>{
             setcurrentSlide(0)
     },[])
-    
         useEffect(()=>{
            if (autoScroll) {
             auto()
@@ -63,5 +62,4 @@ const ImageSlider = () => {
         </section>
     );
 }
-
 export default ImageSlider;

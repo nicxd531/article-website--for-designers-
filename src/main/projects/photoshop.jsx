@@ -3,7 +3,7 @@ import ReactPaginate from "react-paginate";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Photoshop = ({gridToggle}) => {
+const Photoshop = ({gridToggle,setArticleComment,articleComment}) => {
     const [pageNumber, setpageNumber] = useState(0)
     const usersPerPage = 6
     const pagesVisited = pageNumber * usersPerPage
@@ -24,7 +24,7 @@ const Photoshop = ({gridToggle}) => {
                             data-aos-duration="1000"
                             data-aos="flip-up"
                             >
-                                 <div 
+                                 <div onClick={()=>setArticleComment(!articleComment)}
                                 data-aos-duration="2000"
                                 data-aos="flip-left"
                                 >

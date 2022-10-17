@@ -10,8 +10,8 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 
 
 
-const Home = () => {
-
+const Home = ({ articleComment,setArticleComment}) => {
+    
     useEffect(()=>{
         AOS.init(
            { duration: 400,
@@ -19,14 +19,14 @@ const Home = () => {
             once: false}
         );
     })
-    const [toggleComment, setToggleComment] = useState(true)
+    const [toggleComment, setToggleComment] = useState(false);
     return ( 
         <main className="grid Home">
             <ImageSlider />
             <div onClick={()=>{setToggleComment(true)}} className={`comment-arrow ${toggleComment? "arrow-rotate":"arrow-rotate-back"}`}><FaAngleLeft size={30}/></div>
             <Claims/>
-            <Latest toggleComment={toggleComment} setToggleComment={setToggleComment}/>
-            <Comments toggleComment={toggleComment} setToggleComment={setToggleComment}/>
+            <Latest articleComment={articleComment} setArticleComment={setArticleComment} toggleComment={toggleComment} setToggleComment={setToggleComment}/>
+            <Comments setArticleComment={setArticleComment} articleComment={articleComment} toggleComment={toggleComment} setToggleComment={setToggleComment}/>
         </main>
      );
 }

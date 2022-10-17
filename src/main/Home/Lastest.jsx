@@ -13,7 +13,7 @@ import LatestBg from "./latestBg";
 
 
 
-const Latest = ({setToggleComment,toggleComment}) => {
+const Latest = ({articleComment,setArticleComment, setToggleComment,toggleComment}) => {
   return (  
       <section className="latest grid">   
         <div className="gridSpan12">
@@ -42,7 +42,7 @@ const Latest = ({setToggleComment,toggleComment}) => {
             return(
               <SwiperSlide style={{flexShrink:"1"}} key={index}>
                 <div  className="latest-work-articles ">
-                  <div onClick={()=>setToggleComment(!toggleComment)}>
+                  <div  onClick={()=>setArticleComment(!articleComment)}>
                     <img src={data.image} alt="article image"/>
                   </div>
                   <div>
@@ -52,16 +52,14 @@ const Latest = ({setToggleComment,toggleComment}) => {
                     <button className="article-btn"> read more</button>
                   </div>
                 </div>
-                </SwiperSlide>
-              
-            )
-          
+                </SwiperSlide>              
+            )    
           })}
           { print.slice(-2).map((data,index)=>{
             return(
               <SwiperSlide style={{flexShrink:"1",flexGrow:"0"}} key={index}>
                 <div  className="latest-work-articles ">
-                <div onClick={()=>setToggleComment(!toggleComment)}>
+                <div  onClick={()=>setArticleComment(!articleComment)}>
                     <img src={data.image} alt="article image"/>
                   </div>
                   <div>
@@ -73,14 +71,13 @@ const Latest = ({setToggleComment,toggleComment}) => {
                 </div>
                 </SwiperSlide>
               
-            )
-          
+            )         
           })}
           { art.slice(-2).map((data,index)=>{
             return(
               <SwiperSlide style={{flexShrink:"1",flexGrow:"0"}} key={index}>
                 <div  className="latest-work-articles ">
-                <div onClick={()=>setToggleComment(!toggleComment)}>
+                <div  onClick={()=>setArticleComment(!articleComment)}>
                     <img src={data.image} alt="article image"/>
                   </div>
                   <div>
@@ -90,16 +87,14 @@ const Latest = ({setToggleComment,toggleComment}) => {
                     <button className="article-btn"> read more</button>
                   </div>
                 </div>
-                </SwiperSlide>
-              
+                </SwiperSlide>  
             )
-          
           })}
           { photoshop.slice(-2).map((data,index)=>{
             return(
               <SwiperSlide style={{flexShrink:"1",flexGrow:"0"}} key={index}>
                 <div  className="latest-work-articles ">
-                <div onClick={()=>setToggleComment(!toggleComment)}>
+                <div  onClick={()=>setArticleComment(!articleComment)}>
                     <img src={data.image} alt="article image"/>
                   </div>
                   <div>
@@ -110,13 +105,11 @@ const Latest = ({setToggleComment,toggleComment}) => {
                   </div>
                 </div>
                 </SwiperSlide>
-              
             )
-          
           })}
           </Swiper>
           </div>
-          {<LatestBg toggleComment={toggleComment} setToggleComment={setToggleComment}/>}
+          {<LatestBg articleComment={articleComment} setArticleComment={setArticleComment} toggleComment={toggleComment} setToggleComment={setToggleComment}/>}
       </section>
   );
 }

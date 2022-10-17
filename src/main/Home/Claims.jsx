@@ -68,7 +68,6 @@ const Claims = () => {
                   </div>
                 </section>
     return ( 
-      
         <section 
         data-aos-duration="1000"
           data-aos="flip-up" 

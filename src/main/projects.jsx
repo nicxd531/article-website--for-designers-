@@ -14,7 +14,7 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 //
 
 
-const Projects = () => {
+const Projects = ({ articleComment,setArticleComment}) => {
     const [gridToggle, setGridToggle] = useState(false)
     const [toggleComment, setToggleComment] = useState(false)
     useEffect(()=>{
@@ -48,12 +48,12 @@ const Projects = () => {
                
             </div>
             <Routes>
-                <Route path="" element={<All toggleComment={toggleComment} setToggleComment={setToggleComment} gridToggle={gridToggle}/>}/>
-                <Route path="/web" element={<Web toggleComment={toggleComment} setToggleComment={setToggleComment}  gridToggle={gridToggle}/>}/>
+                <Route path="" element={<All articleComment={articleComment} setArticleComment={setArticleComment}  gridToggle={gridToggle}/>}/>
+                <Route path="/web" element={<Web articleComment={articleComment} setArticleComment={setArticleComment}    gridToggle={gridToggle}/>}/>
                 <Route path="/print" element={<Print toggleComment={toggleComment} setToggleComment={setToggleComment}  gridToggle={gridToggle}/>}/>
-                <Route path="/art" element={<Art toggleComment={toggleComment} setToggleComment={setToggleComment} gridToggle={gridToggle}/>}/>
-                <Route path="/photoshop" element={<Photoshop toggleComment={toggleComment} setToggleComment={setToggleComment} gridToggle={gridToggle}/>}/>
-                <Route path="/development" element={<Development toggleComment={toggleComment} setToggleComment={setToggleComment} gridToggle={gridToggle}/>}/>
+                <Route path="/art" element={<Art articleComment={articleComment} setArticleComment={setArticleComment}  gridToggle={gridToggle}/>}/>
+                <Route path="/photoshop" element={<Photoshop articleComment={articleComment} setArticleComment={setArticleComment}  gridToggle={gridToggle}/>}/>
+                <Route path="/development" element={<Development articleComment={articleComment} setArticleComment={setArticleComment} gridToggle={gridToggle}/>}/>
             </Routes>
             <div className="grid-toggle">
                 <div>
@@ -63,7 +63,7 @@ const Projects = () => {
                 </div>
             </div>
             <div onClick={()=>{setToggleComment(true)}} className={`comment-arrow ${toggleComment? "arrow-rotate":"arrow-rotate-back"}`}><FaAngleLeft size={30}/></div>
-            <Comments toggleComment={toggleComment} setToggleComment={setToggleComment}/>
+            <Comments articleComment={articleComment} setArticleComment={setArticleComment} toggleComment={toggleComment} setToggleComment={setToggleComment}/>
         </section>
      );
 }

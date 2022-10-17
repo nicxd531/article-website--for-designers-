@@ -1,6 +1,6 @@
 import BlogDetailsProject from "./BlogDetailsProject ";
 
-const ProjectDetails = ({data}) => {
+const ProjectDetails = ({data,setArticleComment,articleComment }) => {
     return (
         <section className="projectDetails grid">
             <div>
@@ -10,7 +10,7 @@ const ProjectDetails = ({data}) => {
                 nemo enim ipsam voluptatem.</p>
                 <hr/>
             </div>
-            <BlogDetailsProject data={data}/>
+            <BlogDetailsProject articleComment={articleComment} setArticleComment={setArticleComment} data={data}/>
             
             <div className="about-blitz">
                 <h2>About Blitz</h2>

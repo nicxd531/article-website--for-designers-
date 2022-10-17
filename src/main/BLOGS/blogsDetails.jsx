@@ -1,16 +1,15 @@
 import { useParams } from "react-router-dom";
 
 
-const BlogDetails = ({data}) => {
+const BlogDetails = ({data,articleComment, setArticleComment}) => {
     const {id}= useParams();
     const map = data.map((data)=>{
        const checker=id === data.id
-
         return(
             
                  checker && 
                 <div key={data.id } className="blogsDetails">
-                    <div>
+                    <div onClick={()=>setArticleComment(!articleComment)}>
                         <h2>{data.title}</h2>
                        {data.image && <img src={data.image} alt="blog details image"/>}
                     </div>
@@ -34,14 +33,10 @@ const BlogDetails = ({data}) => {
                             <p>{data.article}</p>
                             <p>{data.article}</p>
                         </div>
-
                     </div>
-                
                 </div>
-            
         )
     })
-
     return ( 
         <section className="span10">
           {map }

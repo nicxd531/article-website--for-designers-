@@ -7,7 +7,7 @@ import ReactPaginate from "react-paginate";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const All = ({gridToggle}) => {
+const All = ({gridToggle,setArticleComment,articleComment }) => {
     const [pageNumber, setpageNumber] = useState(0)
     const usersPerPage = 2
     const webl= data2.concat(data3,data4,data5)
@@ -29,7 +29,7 @@ const All = ({gridToggle}) => {
                             data-aos-duration="1000"
                             data-aos="zoom-in"
                             >
-                                <div 
+                                <div onClick={()=>setArticleComment(!articleComment)}  
                                 data-aos-duration="2000"
                                 data-aos="flip-left"
                                 >
@@ -57,7 +57,7 @@ const All = ({gridToggle}) => {
                             data-aos-duration="1000"
                             data-aos="zoom-in"
                             >
-                                <div 
+                                <div onClick={()=>setArticleComment(!articleComment)}
                                 data-aos-duration="2000"
                                 data-aos="flip-left"
                                 >
@@ -85,7 +85,7 @@ const All = ({gridToggle}) => {
                             data-aos-duration="1000"
                             data-aos="zoom-in"
                             >
-                                 <div 
+                                 <div onClick={()=>setArticleComment(!articleComment)}
                                 data-aos-duration="2000"
                                 data-aos="flip-left"
                                 >
@@ -113,7 +113,7 @@ const All = ({gridToggle}) => {
                             data-aos-duration="1000"
                             data-aos="flip-up"
                             >
-                                 <div 
+                                 <div onClick={()=>setArticleComment(!articleComment)}
                                 data-aos-duration="2000"
                                 data-aos="flip-left"
                                 >

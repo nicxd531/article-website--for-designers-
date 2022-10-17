@@ -39,8 +39,8 @@ const Claims = () => {
                   data-aos-duration="1000"
                   data-aos="zoom-in" 
                   >
-                  <img src="/image/markus-winkler-9XfSFjcwGh0-unsplash.jpg" />
-                  <h2>{title}</h2>
+                    <img src="/image/markus-winkler-9XfSFjcwGh0-unsplash.jpg" />
+                    <h2>{title}</h2>
                     <h3>{date}</h3>
                     <div className={toggleArticle2 === 2? "claim-article-h-f":"claim-article-h-s"}>
                       <p>{p}</p>
@@ -55,8 +55,8 @@ const Claims = () => {
                   data-aos-duration="1000"
                   data-aos="zoom-in" 
                   >
-                  <img src="/image/scott-graham-5fNmWej4tAA-unsplash.jpg" />
-                  <h2>{title}</h2>
+                    <img src="/image/scott-graham-5fNmWej4tAA-unsplash.jpg" />
+                    <h2>{title}</h2>
                     <h3>{date}</h3>
                     <div className={toggleArticle3 === 3? "claim-article-h-f":"claim-article-h-s"}>
                       <p>{p}</p>

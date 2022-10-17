@@ -3,9 +3,7 @@ import {useState,useRef, useEffect} from "react"
 import MainComment from "./mainComment";
 
 
-const Comments = (props) => {
-    
-    const [articleComment, setArticleComment] = useState(true)
+const Comments = (props) => {  
     const ref =useRef(null)
     useEffect(() => {
         function handleClickOutside(event) {
@@ -17,8 +15,7 @@ const Comments = (props) => {
          document.removeEventListener("mousedown",handleClickOutside);
         };
       
-     }, [ref])
-    
+     }, [ref]) 
     return ( 
         <section ref={ref} className={`comments ${props.toggleComment?"show-comment":"hide-comment"}`} >
             <div>
@@ -29,7 +26,7 @@ const Comments = (props) => {
                 </div>
             </div>
             
-           { !articleComment && <div className="comments-container">
+           { !props.articleComment && <div className="comments-container">
                 <div 
                 data-aos="flip-up"
                 data-aos-duration="1000" 
@@ -41,12 +38,11 @@ const Comments = (props) => {
                     </div>
                 </div>
             </div>}
-           { articleComment && <MainComment currentUserId="1"/> }
+           { props.articleComment && <MainComment currentUserId="1"/> }
            <div className="scroll-for-more">
                 <hr/>
                 <h2>scroll for more</h2>
-            </div>
-            
+            </div>  
             <div onClick={()=>{props.setToggleComment(false)}}  className={`comment-arrow-2 ${props.toggleComment? "arrow-rotate-back":"arrow-rotate"}`}><FaAngleRight size={30}/></div>
         </section>
      );

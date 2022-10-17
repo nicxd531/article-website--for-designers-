@@ -3,11 +3,11 @@ const Ceos = () => {
     return ( 
         <section className="ceos">
             <hr/>
-             <article
-             data-aos="fade-down-right"
-             data-aos-duration="1000"
-             className="hov"
-             >
+            <article
+            data-aos="fade-down-right"
+            data-aos-duration="1000"
+            className="hov"
+            >
                 <img src="image/black_lion_face_statue_hd_black-1366x768.jpg" alt="ceos image" data-aos="flip-up" data-aos-duration="3000"/>
                 <span>
                     <h2>JANE DOE</h2>

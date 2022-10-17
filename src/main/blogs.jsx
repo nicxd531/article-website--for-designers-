@@ -5,7 +5,7 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 import { useState,useEffect } from "react";
 import{FaAngleLeft } from "react-icons/fa"
 
-const Blogs = ({}) => {
+const Blogs = ({setArticleComment,articleComment}) => {
     const [toggleComment, setToggleComment] = useState(false)
     useEffect(()=>{
         AOS.init(
@@ -24,9 +24,9 @@ const Blogs = ({}) => {
                 nemo enim ipsam voluptatem.</p>
                 <hr/>
             </div>
-            <BlogPost/>
+            <BlogPost articleComment={articleComment} setArticleComment={setArticleComment}/>
             <div onClick={()=>{setToggleComment(true)}} className={`comment-arrow ${toggleComment? "arrow-rotate":"arrow-rotate-back"}`}><FaAngleLeft size={30}/></div>
-            <Comments toggleComment={toggleComment} setToggleComment={setToggleComment}/>
+            <Comments articleComment={articleComment} setArticleComment={setArticleComment} toggleComment={toggleComment} setToggleComment={setToggleComment}/>
             <div className="about-blitz">
                 <h2>About Blitz</h2>
                 <hr/>

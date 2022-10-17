@@ -4,13 +4,13 @@ import { useState,useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import BlogDetails from "../BLOGS/blogsDetails"
 
-const BlogPost = () => {
+const BlogPost = ({setArticleComment,articleComment}) => {
     const [switchToBlogDetails, setSwitchToBlogDetails] = useState(true)
     const articleMap =data.map((data)=>{
         return(
             <div key={data.title} className="main-blog-articles">
                 <h1>{data.title}</h1>
-                <div>
+                <div onClick={()=>setArticleComment(!articleComment)}>
                     <img src={data.image} alt=" blog image"/>
                 </div>
                 <div>
@@ -29,21 +29,18 @@ const BlogPost = () => {
                     </div>
                 </div>
                <hr/>
-
             </div>
-        )
-        
+        )       
     })
     useEffect(() => {
         setSwitchToBlogDetails(true)
     
     }, [])
-    
     return ( 
     <section className="blogArticles ">
        {switchToBlogDetails && articleMap}
       <Routes>
-        <Route path="/blogspost/:id" element={<BlogDetails data={data}/>}/>
+        <Route path="/blogspost/:id" element={<BlogDetails articleComment={articleComment} setArticleComment={setArticleComment} data={data}/>}/>
        </Routes>
 
     </section> 

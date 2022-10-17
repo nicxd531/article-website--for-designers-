@@ -1,19 +1,17 @@
 import { useParams } from "react-router-dom";
 
 
-const BlogDetailsProject = ({data}) => {
+const BlogDetailsProject = ({ setArticleComment,articleComment ,data}) => {
     const {id}= useParams();
     const map = data.map((data,index)=>{
         
       index== id && console.log( "index" ,index)
        const checker= id == index 
-       console.log("id" ,id)
-
         return(
             
                  checker && 
                 <div key={data.id + index} className="blogsDetails">
-                    <div>
+                    <div onClick={()=>setArticleComment(!articleComment)}>
                         <h2>{data.title}</h2>
                        {data.image && <img src={data.image} alt="blog details image"/>}
                     </div>

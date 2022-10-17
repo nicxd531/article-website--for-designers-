@@ -70,9 +70,7 @@ const Comment = ({data, replies ,currentUserId ,deleteComment ,activeComment,set
                         setActiveComment={setActiveComment} 
                         activeComment={activeComment}
                         currentUserId={currentUserId}
-                        />
-                        
-
+                        />                        
                         )
                     })}
 

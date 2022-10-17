@@ -3,7 +3,7 @@ import ReactPaginate from "react-paginate";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Development = ({gridToggle}) => {
+const Development = ({gridToggle,setArticleComment,articleComment}) => {
     const [pageNumber, setpageNumber] = useState(0)
     const usersPerPage = 6
     const pagesVisited = pageNumber * usersPerPage
@@ -21,7 +21,7 @@ const Development = ({gridToggle}) => {
                             data-aos-duration="1000"
                             data-aos="zoom-in"
                             >
-                                <div 
+                                <div onClick={()=>setArticleComment(!articleComment)}
                                 data-aos-duration="2000"
                                 data-aos="flip-left"
                                 >

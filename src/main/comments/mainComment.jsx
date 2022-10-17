@@ -6,9 +6,7 @@ import CommentForm from "./commentForm";
 const MainComment = ({currentUserId}) => {
     const [backendComment, setBackendComment] = useState([])
     const [activeComment, setActiveComment] = useState(null)
-
     const rootComments =backendComment.filter(backendComment=> backendComment.parentId===null)
-
     const getReplies = (CommentId)=>{
         return backendComment
         .filter((backendComment)=>backendComment.parentId===CommentId)
@@ -36,8 +34,7 @@ const MainComment = ({currentUserId}) => {
      getCommentsApi().then(data=>{
         setBackendComment(data)
      })
-    }, []);
-    
+    }, []); 
     return ( 
         <section 
         className="main-comment"
