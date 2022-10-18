@@ -7,6 +7,7 @@ import photoshop from "../data/photoshop.json"
 import { Swiper, SwiperSlide } from "swiper/react";
 import  { Navigation, Pagination } from 'swiper';
 import LatestBg from "./latestBg";
+import { Link } from "react-router-dom";
 
 
 
@@ -49,7 +50,7 @@ const Latest = ({articleComment,setArticleComment, setToggleComment,toggleCommen
                     <h2>{data.title}</h2>
                     <h3>author :<span>{data.autor}</span></h3>
                     <h3>category :<span>{data.Category}</span></h3>
-                    <button className="article-btn"> read more</button>
+                    <button className="article-btn"><Link to={`/projectDetails/web/${index}`}>read more</Link> </button>
                   </div>
                 </div>
                 </SwiperSlide>              
@@ -66,7 +67,7 @@ const Latest = ({articleComment,setArticleComment, setToggleComment,toggleCommen
                     <h2>{data.title}</h2>
                     <h3>author :<span>{data.autor}</span></h3>
                     <h3>category :<span>{data.Category}</span></h3>
-                    <button className="article-btn"> read more</button>
+                    <button className="article-btn"><Link to={`/projectDetails/print/${index}`}>read more</Link>e</button>
                   </div>
                 </div>
                 </SwiperSlide>
@@ -84,7 +85,7 @@ const Latest = ({articleComment,setArticleComment, setToggleComment,toggleCommen
                     <h2>{data.title}</h2>
                     <h3>author :<span>{data.autor}</span></h3>
                     <h3>category :<span>{data.Category}</span></h3>
-                    <button className="article-btn"> read more</button>
+                    <button className="article-btn"><Link to={`/projectDetails/art/${index}`}>read more</Link></button>
                   </div>
                 </div>
                 </SwiperSlide>  
@@ -101,7 +102,7 @@ const Latest = ({articleComment,setArticleComment, setToggleComment,toggleCommen
                     <h2>{data.title}</h2>
                     <h3>author :<span>{data.autor}</span></h3>
                     <h3>category :<span>{data.Category}</span></h3>
-                    <button className="article-btn"> read more</button>
+                    <button className="article-btn"> <Link to={`/projectDetails/photoshop/${index}`}>read more</Link></button>
                   </div>
                 </div>
                 </SwiperSlide>

@@ -74,6 +74,7 @@ li {
   width: 100%;
   height: 3px;
   background-color: var(--primary-colour-dark);
+  transition: all ease-in 0.8s;
 }
 .navBar > div {
   grid-column: span 12;
@@ -105,6 +106,9 @@ li {
   flex: 1 1 0;
   background-color: #fff;
   border-radius: var(--border-radius-md);
+}
+.searchToggle{
+  display: none;
 }
 .navBar > div > div:nth-child(3) {
   margin: auto 0;
@@ -149,6 +153,10 @@ li {
 }
 .navigation-btn > a:first-child {
   margin-top: 10px;
+}
+.navigation-btn >hr{
+  display: none;
+  transition: all 0.8s ease-in;
 }
 .navigation-btn > div {
   margin-bottom: 10px;
@@ -268,6 +276,7 @@ li {
       position: absolute;
       border: 1.5px solid var(--primary-colour);
       top: 50%;
+      transition: all ease-out 0.8s;
     }
     .navigation-btn > a:first-child{
       margin: 0;
@@ -280,10 +289,21 @@ li {
       margin-left: 50px;
 
     }
+    .searchToggle{
+      display: inline-block;
+    }
     .search{
       position: absolute;
-      right: -200px;
-      visibility: hidden;
+      top: 75%;
+      width: 400px;
+    }
+    .toggleSearchOn{
+      right: 11%;
+      transition: all 0.7s ease-in;
+    }
+    .toggleSearchOff{
+      right: -500px;
+      transition: all 0.7s ease-out ;
     }
     .navBar > div > div:nth-child(3){
       display: none;
@@ -355,18 +375,21 @@ li {
   color: var(--background-colour-white-radio-btn);
   position: absolute;
   top: 50%;
+  cursor: pointer;
 }
 .main-img-arr-2 {
   color: var(--background-colour-white-radio-btn);
   position: absolute;
   top: 50%;
   right: 0;
+  cursor: pointer;
 }
 .image-radio-btn {
   position: absolute;
   top: 85%;
   right: 5%;
   color: var(--background-colour-white-radio-btn);
+  cursor: pointer;
 }
 .comment-arrow {
   height: 35px;
@@ -534,7 +557,7 @@ s .wave:nth-child(2) {
 }
 .latest-work-slider {
   background-color: #70707037;
-  height: 158px;
+  height: 170px;
   border-radius: var(--border-radius-md);
   overflow: hidden;
   padding: 6px 0;
@@ -617,6 +640,9 @@ s .wave:nth-child(2) {
 }
 .mySwiper {
   border-radius: var(--border-radius-md);
+}
+.swiper-pagination{
+  top: 90%;
 }
 .mySwiper .swiper-pagination-bullet-active {
   background: var(--primary-colour-dark);
@@ -1524,7 +1550,7 @@ border-radius: var(--border-radius-md);
     border-radius: var(--border-radius-md);
   }
   .article-btn{
-    margin-top: 20px;
+    margin-top: 40px;
   }
   .main-image > div{
     width: 300px;

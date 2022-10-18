@@ -1,13 +1,15 @@
 import{BiSearch ,BiMenu, BiUser} from "react-icons/bi"
+import{MdOutlineCancel} from "react-icons/md"
 import{BsSun , BsMoonFill} from "react-icons/bs"
 import { useState,useRef, useEffect } from "react";
 const NavBar = () => {
     const [ToggleMenu, setToggleMenu] = useState(false)
     const [ToggleThemeColour, setToggleThemeColour] = useState(false)
+    const [ToggleSearch, setToggleSearch] = useState(false)
     const ref =useRef(null)
     useEffect(() => {
         function handleClickOutside(event) {
-         if(ref.current && !ref.current.contains(event.target)){setToggleMenu(false)}
+         if(ref.current && !ref.current.contains(event.target)){setToggleMenu(false),setToggleSearch(false)}
          
         }
         document.addEventListener("mousedown",handleClickOutside);
@@ -23,7 +25,9 @@ const NavBar = () => {
                 <div className="pageLogo-div ">
                     <img src="image/companyimage.png" alt="company's logo"/>
                 </div>
-                <div className="search">
+                <div
+                ref={ref}
+                 className={`search ${ToggleSearch?"toggleSearchOn":"toggleSearchOff"}`}>
                     <form >
                         <input 
                         type="text"
@@ -32,8 +36,11 @@ const NavBar = () => {
                         <BiSearch size={18}></BiSearch>
                     </form>
                 </div >
-                <div >
-                    <BiMenu  onClick={()=>{setToggleMenu(!ToggleMenu)}} size={32.4}></BiMenu>
+                <div >{
+                    ToggleMenu?
+                    <MdOutlineCancel onClick={()=>{setToggleMenu(false)}} size={32.4}></MdOutlineCancel>:
+                    <BiMenu  onClick={()=>{setToggleMenu(true)}} size={32.4}></BiMenu>
+                     }
                 </div>
                 <div ref={ref} className={`navigation-btn  ${ToggleMenu? "menu-visibity-on":"menu-visibity-off" }`}>
                     <a href="/">home</a>
@@ -47,9 +54,12 @@ const NavBar = () => {
                             ToggleThemeColour?
                             <BsMoonFill onClick={()=>{setToggleThemeColour(!ToggleThemeColour)}} size={18}></BsMoonFill>:
                             <BsSun onClick={()=>{setToggleThemeColour(!ToggleThemeColour)}} size={18}></BsSun>
+                            
                         }
+                        <BiSearch className="searchToggle" onClick={()=>setToggleSearch(!ToggleSearch)} size={18}></BiSearch>
                     </div>
                     <hr/>
+
                 </div>
             </div>
             
