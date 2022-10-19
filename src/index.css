@@ -34,11 +34,13 @@
 {
   display: none;
 }
-
-
+html{
+  white-space: wrap;
+}
 /*============================================================
                       reset
 ============================================================*/
+html,
 body,
 p,
 a,
@@ -134,7 +136,7 @@ li {
   align-items: center;
   flex-grow: 1;
   right: 0%;
-  top: 70px;
+  top: 80px;
   border-top-left-radius: var(--border-radius-md);
   border-bottom-left-radius: var(--border-radius-md);
   padding: 10px;
@@ -191,11 +193,14 @@ li {
 } */
 .menu-visibity-on {
   visibility: visible;
+  
+  opacity: 1;
   transition: all 0.5s ease-in;
 }
 .menu-visibity-off {
-  visibility: hidden;
+ display: none;
   right: -140px;
+  opacity: 0;
   transition: all 0.5s ease-out;
 }
 @media screen and  (min-width: 422px) {
@@ -304,6 +309,7 @@ li {
     .toggleSearchOff{
       right: -500px;
       transition: all 0.7s ease-out ;
+      display: none;
     }
     .navBar > div > div:nth-child(3){
       display: none;
@@ -400,7 +406,7 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  right: -20px;
+  right: 0px;
   top: 43%;
 }
 .arrow-rotate {
@@ -670,6 +676,7 @@ s .wave:nth-child(2) {
 }
 .hide-comment {
   visibility: hidden;
+  display: none;
   right: -50%;
   transition: all 0.5s ease-out;
 }
@@ -1836,6 +1843,7 @@ border-radius: var(--border-radius-md);
   }
   .comments{
     margin-left: 10%;
+    display: inline-block;
   }
   .comment-form-textarea{
     width: 250px;
