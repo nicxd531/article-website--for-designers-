@@ -261,6 +261,7 @@ li {
     top: 0;
     visibility: visible;
     width: max-content;
+    opacity: 1;
     
     }
     .navigation-btn > *{
@@ -1156,7 +1157,7 @@ transition: all 0.5 ease-in;
   
 }
 .article-card-1 .redirect-to-project-details{
-
+  margin-bottom: 6PX;
   position: absolute;
   bottom: 0;
 }
