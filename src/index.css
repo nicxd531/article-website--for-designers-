@@ -242,6 +242,9 @@ li {
   body{
     font-size: 18px;
   }
+  .menu-visibity-off{
+    display: flex;
+  }
     .navigation-btn{
     position: relative;
     grid-column: 3/span 10;
