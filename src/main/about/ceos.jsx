@@ -4,7 +4,7 @@ const Ceos = () => {
         <section className="ceos">
             <hr/>
             <article
-            data-aos="fade-down-right"
+            data-aos="zoom-in"
             data-aos-duration="1000"
             className="hov"
             >
@@ -17,7 +17,7 @@ const Ceos = () => {
                 </span>
             </article>
             <article
-            data-aos="fade-down-left"
+            data-aos="zoom-in"
             data-aos-duration="1000"
             >
                 <img src="image/black_lion_face_statue_hd_black-1366x768.jpg" alt="ceos image" data-aos="flip-up" data-aos-duration="3000"/>
@@ -29,7 +29,7 @@ const Ceos = () => {
                 </span>
             </article>
             <article
-            data-aos="fade-down-right"
+            data-aos="zoom-in"
             data-aos-duration="1000"
             >
                 <img src="image/black_lion_face_statue_hd_black-1366x768.jpg" alt="ceos image" data-aos="flip-up" data-aos-duration="3000"/>
