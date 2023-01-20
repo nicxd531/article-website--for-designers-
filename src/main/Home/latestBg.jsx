@@ -16,8 +16,6 @@ const LatestBg = ({articleComment,setArticleComment ,setToggleComment,toggleComm
                         const id2 = id
                         return(
                             <div  
-                            data-aos-duration="1000"
-                            data-aos="zoom-in"
                             key={index} className="latest-work-articles-bg">
                                 <div onClick={()=>setArticleComment(!articleComment)} >
                                 <img src={data.image} alt="article image"/>
@@ -44,8 +42,6 @@ const LatestBg = ({articleComment,setArticleComment ,setToggleComment,toggleComm
                         const id2 = id
                         return(
                             <div  
-                            data-aos-duration="1000"
-                            data-aos="zoom-in" 
                             key={index} className="latest-work-articles-bg">
                                 <div  onClick={()=>setArticleComment(!articleComment)}>
                                 <img src={data.image} alt="article image"/>
@@ -72,8 +68,6 @@ const LatestBg = ({articleComment,setArticleComment ,setToggleComment,toggleComm
                         const id2 = id
                         return(
                             <div  
-                            data-aos-duration="1000"
-                            data-aos="zoom-in"
                             key={index} className="latest-work-articles-bg">
                                 <div  onClick={()=>setArticleComment(!articleComment)}>
                                 <img src={data.image} alt="article image"/>
@@ -100,8 +94,6 @@ const LatestBg = ({articleComment,setArticleComment ,setToggleComment,toggleComm
                         const id2 = id
                         return(
                             <div  
-                            data-aos-duration="1000"
-                            data-aos="zoom-in"
                             key={index} className="latest-work-articles-bg">
                                 <div  onClick={()=>setArticleComment(!articleComment)}>
                                 <img src={data.image} alt="article image"/>
