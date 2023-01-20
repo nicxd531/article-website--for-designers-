@@ -236,17 +236,10 @@ li {
   body {
     font-size: 18px;
   }
-<<<<<<< HEAD
   .navigation-btn > hr {
     display: inline-block;
   }
   .navigation-btn {
-=======
-  .menu-visibity-off{
-    display: flex;
-  }
-    .navigation-btn{
->>>>>>> master
     position: relative;
     grid-column: 3 / span 10;
     grid-row: 1 / span 1;
