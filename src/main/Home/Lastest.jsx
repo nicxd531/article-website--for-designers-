@@ -18,17 +18,13 @@ const Latest = ({articleComment,setArticleComment, setToggleComment,toggleCommen
   return (  
       <section className="latest grid">   
         <div className="gridSpan12">
-            <div 
-            data-aos="zoom-out"
-            data-aos-duration="1000" 
-            >
+            <div >
                 <h3>latest works</h3>
             </div>
         </div>
        
-        <div data-aos="zoom-in"
-              data-aos-duration="1000" 
-              className="latest-work-slider gridSpan12 ">
+        <div 
+          className="latest-work-slider gridSpan12 ">
         <Swiper
         slidesPerView={2}
         spaceBetween={15}
