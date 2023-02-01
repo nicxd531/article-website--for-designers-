@@ -987,6 +987,7 @@ s .wave:nth-child(2) {
 }
 .grid-toggle > div > * {
   margin: 4px;
+  cursor: pointer;
 }
 .grid-toggle > div > div {
   position: absolute;
