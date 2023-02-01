@@ -57,8 +57,8 @@ const Projects = ({ articleComment,setArticleComment}) => {
             </Routes>
             <div className="grid-toggle">
                 <div>
-                    <BsGridFill onClick={()=>setGridToggle(true)} size={16}/>
-                    <BsViewList onClick={()=>setGridToggle(false)} size={16}/>
+                    <BsGridFill onClick={()=>setGridToggle(false)} size={16}/>
+                    <BsViewList onClick={()=>setGridToggle(true)} size={16}/>
                     <div className={`${gridToggle?"grid-toggle-move-right":"grid-toggle-move-left"}`}></div>
                 </div>
             </div>
