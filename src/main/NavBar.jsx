@@ -2,10 +2,13 @@ import{BiSearch ,BiMenu, BiUser} from "react-icons/bi"
 import{MdOutlineCancel} from "react-icons/md"
 import{BsSun , BsMoonFill} from "react-icons/bs"
 import { useState,useRef, useEffect } from "react";
+import { Turn as Hamburger } from 'hamburger-react'
+
 const NavBar = () => {
     const [ToggleMenu, setToggleMenu] = useState(false)
     const [ToggleThemeColour, setToggleThemeColour] = useState(false)
     const [ToggleSearch, setToggleSearch] = useState(false)
+    const [isOpen, setOpen] = useState(false)
     const ref =useRef(null)
     useEffect(() => {
         function handleClickOutside(event) {
@@ -36,13 +39,10 @@ const NavBar = () => {
                         <BiSearch size={18}></BiSearch>
                     </form>
                 </div >
-                <div >{
-                    ToggleMenu?
-                    <MdOutlineCancel onClick={()=>{setToggleMenu(false)}} size={32.4}></MdOutlineCancel>:
-                    <BiMenu  onClick={()=>{setToggleMenu(true)}} size={32.4}></BiMenu>
-                     }
+                <div >
+                <Hamburger toggled={isOpen} toggle={setOpen} />
                 </div>
-                <div ref={ref} className={`navigation-btn  ${ToggleMenu? "menu-visibity-on":"menu-visibity-off" }`}>
+                <div ref={ref} className={`navigation-btn  ${isOpen? "menu-visibity-on":"menu-visibity-off" }`}>
                     <a href="/">home</a>
                     <a href="/About">about</a>
                     <a href="/Projects">projects</a>

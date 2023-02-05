@@ -201,9 +201,36 @@ li {
   opacity: 0;
   transition: all 0.5s ease-out;
 }
-@media screen and (min-width: 422px) {
+
+@media screen and (min-width: 414px) {
+  .navBar {
+    z-index: 1;
+    position: fixed;
+    background-color: white;
+  }
   .navigation-btn {
-    top: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    right: 0;
+    background-color: white;
+  }
+  .navigation-btn > * {
+    border-top: none;
+    color: var(--primary-colour-dark);
+    margin-bottom: 0;
+  }
+  .navigation-btn > a {
+    color: var(--primary-colour-dark);
+  }
+  .menu-visibity-on {
+    height: 185px;
+    transition: all 0.3s ease-out;
+  }
+  .menu-visibity-off {
+    height: 0px;
+    transition: all 0.3s ease-in;
   }
   .navBar > div > div:nth-child(3) {
     display: flex;
@@ -236,8 +263,12 @@ li {
   body {
     font-size: 18px;
   }
+
   .navigation-btn > hr {
     display: inline-block;
+  }
+  .navBar {
+    position: relative;
   }
   .navigation-btn {
     position: relative;
@@ -270,6 +301,7 @@ li {
   .navigation-btn > div > * {
     margin-left: 20px;
     transform: scale(1.1);
+    margin-top: 5px;
   }
   .navigation-btn > hr {
     width: 85%;
@@ -1430,7 +1462,16 @@ s .wave:nth-child(2) {
   border-radius: var(--border-radius-md);
 }
 /*================================ media queries==========================*/
-@media screen and (min-width: 422px) {
+@media screen and (min-width: 412px) {
+  .about,
+  .projects,
+  .blogs,
+  .contact {
+    padding-top: 120px;
+  }
+  .Home {
+    padding-top: 60px;
+  }
   .image-slider {
     height: 210px;
   }
