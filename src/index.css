@@ -202,7 +202,7 @@ li {
   transition: all 0.5s ease-out;
 }
 
-@media screen and (min-width: 414px) {
+@media screen and (min-width: 360px) {
   .navBar {
     z-index: 1;
     position: fixed;
@@ -1462,7 +1462,7 @@ s .wave:nth-child(2) {
   border-radius: var(--border-radius-md);
 }
 /*================================ media queries==========================*/
-@media screen and (min-width: 412px) {
+@media screen and (min-width: 360px) {
   .about,
   .projects,
   .blogs,

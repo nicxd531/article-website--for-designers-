@@ -23,7 +23,7 @@ const Home = ({ articleComment,setArticleComment}) => {
     return ( 
         <main className="grid Home">
             <ImageSlider />
-            <div onClick={()=>{setToggleComment(true)}} className={`comment-arrow ${toggleComment? "arrow-rotate":"arrow-rotate-back"}`}><FaAngleLeft size={30}/></div>
+            <div onClick={()=>{setToggleComment(!toggleComment)}} className={`comment-arrow ${toggleComment? "arrow-rotate":"arrow-rotate-back"}`}><FaAngleLeft size={30}/></div>
             <Claims/>
             <Latest articleComment={articleComment} setArticleComment={setArticleComment} toggleComment={toggleComment} setToggleComment={setToggleComment}/>
             <Comments setArticleComment={setArticleComment} articleComment={articleComment} toggleComment={toggleComment} setToggleComment={setToggleComment}/>
