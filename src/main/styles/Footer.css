@@ -1,0 +1,62 @@
+
+/*============================================================
+                      variables
+============================================================*/
+:root {
+    --background-colour-white: #fff;
+    --background-colour-white-radio-btn: rgba(169, 166, 166, 0.348);
+    --box-shadow-1: 3px 3px 3px rgba(115, 110, 110, 0.978);
+    --box-shadow-2: 2px 2px 2px rgba(89, 88, 88, 0.978);
+    --primary-colour: rgba(150, 150, 150, 0.96);
+    --primary-colour-dark: #707070;
+    --navbar-background: #d4d4d4;
+    --border-tester: 1px solid purple;
+    --border-tester2: 1px solid red;
+    --text-colour: #2d2c2c;
+    --font-size: 16px;
+    --font-size-10px: 0.625rem;
+    --font-size-12px: 0.75rem;
+    --font-size-14px: 0.875rem;
+    --font-size-16px: 1rem;
+    --font-size-18px: 1.125rem;
+    --font-size-20px: 1.25rem;
+    --font-size-24px: 1.5rem;
+    --font-size-30px: 1.875rem;
+    --font-size-32px: 2rem;
+    --border-radius-md: 20px;
+    --border-radius-md: 8px;
+    --padding-sm: 10px;
+    --span-12: span 12;
+    --span-2-10: 2 / span 10;
+  }
+
+/*============================================================
+                     footer
+============================================================*/
+.footer {
+    grid-column: span 12;
+    background-color: var(--primary-colour);
+    height: 46px;
+    margin-top: 48.5px;
+  }
+  .footer > hr {
+    grid-column: span 12;
+    grid-row: 1 / span 1;
+    margin: 0;
+    grid-row: 1;
+    width: 100%;
+    height: 5px;
+    background-color: var(--primary-colour-dark);
+  }
+  .footer > div {
+    grid-column: var(--span-12);
+    text-align: center;
+  }
+  .footer > div > div {
+    font-size: var(--font-size-10px);
+  }
+  .footer > div > div:first-child,
+  .footer > div > div:last-child {
+    grid-column: span 6;
+    margin: auto 0;
+  }
