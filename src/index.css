@@ -129,6 +129,7 @@ li {
               navigation-btn
 =================================*/
 .navigation-btn {
+
   display: flex;
   flex-direction: column;
   background-color: var(--primary-colour);
@@ -215,6 +216,7 @@ li {
     background-color: white;
   }
   .navigation-btn {
+    margin-top: 20px;
     width: 100%;
     display: flex;
     flex-direction: column;
