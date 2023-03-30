@@ -52,11 +52,11 @@ const NavBar = () => {
                         <a><BiUser size={18}></BiUser></a>
                         {
                             ToggleThemeColour?
-                            <BsMoonFill onClick={()=>{setToggleThemeColour(!ToggleThemeColour)}} size={18}></BsMoonFill>:
-                            <BsSun onClick={()=>{setToggleThemeColour(!ToggleThemeColour)}} size={18}></BsSun>
+                            <BsMoonFill className="icons" onClick={()=>{setToggleThemeColour(!ToggleThemeColour)}} size={18}></BsMoonFill>:
+                            <BsSun className="icons" onClick={()=>{setToggleThemeColour(!ToggleThemeColour)}} size={18}></BsSun>
                             
                         }
-                        <BiSearch className="searchToggle" onClick={()=>setToggleSearch(!ToggleSearch)} size={18}></BiSearch>
+                        <BiSearch  className="searchToggle icons" onClick={()=>setToggleSearch(!ToggleSearch)} size={18}></BiSearch>
                     </div>
                     <hr/>
 
