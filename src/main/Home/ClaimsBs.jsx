@@ -9,7 +9,6 @@ const ClaimsBs = ({data,loading}) => {
     const disData = 
     <section className="lg-screen bg-claims">
     {!loading && data.claims.data.map((data,index)=>{
-        console.log(data)
         return(
             
             <div key={index}>

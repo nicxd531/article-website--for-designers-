@@ -25,14 +25,8 @@ const All = ({gridToggle,setArticleComment,articleComment }) => {
                         return(
                             <div 
                             key={data.title} 
-                            className={`${gridToggle?"article-card-1 grid":"article-card-2"}`}
-                            data-aos-duration="1000"
-                            data-aos="zoom-in"
-                            >
-                                <div onClick={()=>setArticleComment(!articleComment)}  
-                                data-aos-duration="2000"
-                                data-aos="flip-left"
-                                >
+                            className={`${gridToggle?"article-card-1 grid":"article-card-2"}`} >
+                                <div onClick={()=>setArticleComment(!articleComment)}  >
                                     <img src={data.image} alt="article image"/>
                                 </div>
                                 <div>
@@ -53,13 +47,9 @@ const All = ({gridToggle,setArticleComment,articleComment }) => {
                         return(
                             <div 
                             key={data.title} 
-                            className={`${gridToggle?"article-card-1 grid":"article-card-2"}`}
-                            data-aos-duration="1000"
-                            data-aos="zoom-in"
-                            >
+                            className={`${gridToggle?"article-card-1 grid":"article-card-2"}`} >
                                 <div onClick={()=>setArticleComment(!articleComment)}
-                                data-aos-duration="2000"
-                                data-aos="flip-left"
+                        
                                 >
                                     <img src={data.image} alt="article image"/>
                                 </div>
@@ -81,13 +71,9 @@ const All = ({gridToggle,setArticleComment,articleComment }) => {
                         return(
                             <div 
                             key={data.title} 
-                            className={`${gridToggle?"article-card-1 grid":"article-card-2"}`}
-                            data-aos-duration="1000"
-                            data-aos="zoom-in"
-                            >
+                            className={`${gridToggle?"article-card-1 grid":"article-card-2"}`} >
                                  <div onClick={()=>setArticleComment(!articleComment)}
-                                data-aos-duration="2000"
-                                data-aos="flip-left"
+                        
                                 >
                                     <img src={data.image} alt="article image"/>
                                 </div>
@@ -109,14 +95,8 @@ const All = ({gridToggle,setArticleComment,articleComment }) => {
                         return(
                             <div 
                             key={data.title} 
-                            className={`${gridToggle?"article-card-1 grid":"article-card-2"}`}
-                            data-aos-duration="1000"
-                            data-aos="flip-up"
-                            >
-                                 <div onClick={()=>setArticleComment(!articleComment)}
-                                data-aos-duration="2000"
-                                data-aos="flip-left"
-                                >
+                            className={`${gridToggle?"article-card-1 grid":"article-card-2"}`}>
+                                 <div onClick={()=>setArticleComment(!articleComment)} >
                                     <img src={data.image} alt="article image"/>
                                 </div>
                                 <div>

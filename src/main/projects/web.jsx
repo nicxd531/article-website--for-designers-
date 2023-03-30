@@ -20,14 +20,8 @@ const Web = ({gridToggle}) => {
                         return(
                             <div 
                             key={data.title}  
-                            className={`${gridToggle?"article-card-1 grid":"article-card-2"}`}
-                            data-aos-duration="1000"
-                            data-aos="zoom-out"
-                            >
-                                <div 
-                                data-aos-duration="2000"
-                                data-aos="flip-left"
-                                >
+                            className={`${gridToggle?"article-card-1 grid":"article-card-2"}`} >
+                                <div >
                                     <img src={data.image} alt="article image"/>
                                 </div>
                                 <div>

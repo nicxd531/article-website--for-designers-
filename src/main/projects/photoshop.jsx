@@ -12,22 +12,15 @@ const Photoshop = ({gridToggle,setArticleComment,articleComment}) => {
     setpageNumber(selected)
     }
     
-    
-    console.log(data5.length)
+
     return ( 
         <section className="project-list grid">
             { data5.slice(pagesVisited, pagesVisited + usersPerPage).map((data, index)=>{
                         return(
                             <div 
                             key={data.title}  
-                            className={`${gridToggle?"article-card-1 grid":"article-card-2"}`}
-                            data-aos-duration="1000"
-                            data-aos="flip-up"
-                            >
-                                 <div onClick={()=>setArticleComment(!articleComment)}
-                                data-aos-duration="2000"
-                                data-aos="flip-left"
-                                >
+                            className={`${gridToggle?"article-card-1 grid":"article-card-2"}`} >
+                                 <div onClick={()=>setArticleComment(!articleComment)} >
                                     <img src={data.image} alt="article image"/>
                                 </div>
                                 <div>

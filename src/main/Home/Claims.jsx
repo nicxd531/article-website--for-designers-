@@ -18,10 +18,7 @@ const Claims = () => {
   const date="12-05-2022"
   const title="LOREM IPSUM"
   const Div = <section className="lg-screen bg-claims">
-                  <div
-                  data-aos-duration="1000"
-                  data-aos="zoom-in" 
-                  >
+                  <div>
                     <img src="/image/scott-graham-OQMZwNd3ThU-unsplash.jpg" />
                     <h2>{title}</h2>
                     <h3>{date}</h3>
@@ -34,10 +31,7 @@ const Claims = () => {
                       {toggleArticle1=== 1 && <span  onMouseLeave={()=>setToggleArticle1(4)} onClick={()=>setToggleArticle1(4)}>read less</span>}
                     </div>
                   </div>
-                  <div
-                  data-aos-duration="1000"
-                  data-aos="zoom-in" 
-                  >
+                  <div>
                   <img src="/image/markus-winkler-9XfSFjcwGh0-unsplash.jpg" />
                   <h2>{title}</h2>
                     <h3>{date}</h3>
@@ -50,10 +44,7 @@ const Claims = () => {
                       {toggleArticle2 === 2 && <span  onMouseLeave={()=>setToggleArticle2(5)} onClick={()=>setToggleArticle2(5)}>read less</span>}
                     </div>
                   </div>
-                  <div
-                  data-aos-duration="1000"
-                  data-aos="zoom-in" 
-                  >
+                  <div>
                   <img src="/image/scott-graham-5fNmWej4tAA-unsplash.jpg" />
                   <h2>{title}</h2>
                     <h3>{date}</h3>
@@ -68,10 +59,7 @@ const Claims = () => {
                   </div>
                 </section>
     return ( 
-        <section 
-        data-aos-duration="1000"
-          data-aos="flip-up" 
-          className="claims">
+        <section className="claims">
             <Swiper
         effect={"coverflow"}
         grabCursor={true}
