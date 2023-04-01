@@ -32,7 +32,7 @@ const Web = ({gridToggle}) => {
                                 <div>
                                     <p>{data.article}</p>
                                 </div>
-                                <button className="redirect-to-project-details"><Link to={`/projectDetails/web/${index}`}>read more</Link></button>
+                                <button className="redirect-to-project-details"><Link to={`/projectDetails/web/${data.id}`}>read more</Link></button>
                             </div>
                         )
                     })}

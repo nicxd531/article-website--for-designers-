@@ -31,7 +31,7 @@ const Art = ({gridToggle,setArticleComment,articleComment}) => {
                                     <p>{data.article}</p>
                                 </div>
                                 <span className="btn-span">
-                                <button className="redirect-to-project-details"><Link to={`/projectDetails/development/${index}`}>read more</Link></button>
+                                <button className="redirect-to-project-details"><Link to={`/projectDetails/development/${data.id}`}>read more</Link></button>
                                 </span>
                             </div>
                         )
